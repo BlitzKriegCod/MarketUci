@@ -1,0 +1,59 @@
+body {
+    background-color: #fff;
+    color: #212121;
+    font-family: Ubuntu, sans-serif;
+    font-style: italic;
+    background-image: url('static/bitmap.png');
+    background-size: auto;
+    position: relative;
+    padding-bottom: 20em;
+    min-height: 100vh;
+}
+
+.container {
+    padding-top: 20px;
+
+}
+
+.card {
+    background-color: #fff;
+    color: #212121;
+    margin-bottom: 30px;
+    transition: all 0.3s ease;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+.donative{
+    padding-left: 40%;
+
+
+}
+.icons{
+
+width: 50px;
+
+}
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.navbar {
+    background-color: #f9f9f9;
+    padding: 15*20px 10*20px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #f9f9f9;
+    color: #212121;
+    text-align: center;
+    padding: 1em 0;
+    margin-top: auto;
+}

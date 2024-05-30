@@ -1,0 +1,4 @@
+django
+requests
+bs4
+Pillow

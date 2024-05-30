@@ -1,0 +1,59 @@
+{%load static %}
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="{% static '/css/bootstrap.min.css'%}">
+
+    <!-- Latest compiled JavaScript -->
+    <script src="{% static 'js/bootstrap.bundle.min.js'%}"></script>
+
+    <script src="{% static 'js/jquery-3.2.1.slim.min.js'%}"></script>
+
+    <!-- Popper JS -->
+    <script src="{% static 'js/popper.min.js'%}"></script>
+
+    <title>Document</title>
+</head>
+
+<body class="bg-dark">
+
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <h1 class="text-center mb-4 text-white">Subir Nuevo Anuncio</h1>
+                <form action="/crearauncion" method="POST" enctype="multipart/form-data">
+                    {% csrf_token %}
+
+                    <div class="mb-3">
+                        <label for="image" class="form-label text-white">Imagen:</label>
+                        <input type="file" name="image" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="description" class="form-label text-white">Descripción:</label>
+                        <textarea name="description" rows="3" class="form-control" required></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label for="title" class="form-label text-white">Título:</label>
+                        <input type="text" name="title" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="price" class="form-label text-white">Precio:</label>
+                        <input type="number" step="0.01" name="price" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="contact" class="form-label text-white">Contacto:</label>
+                        <input type="tel" name="contact" class="form-control" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100">Publicar anuncio</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
