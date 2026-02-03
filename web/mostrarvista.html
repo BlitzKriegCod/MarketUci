@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static/css/estilomio.css">
 
     <!-- Latest compiled JavaScript -->
     <script src="static/js/bootstrap.bundle.min.js"></script>
@@ -20,44 +21,39 @@
     <title>Document</title>
 </head>
 
-<body >
+<body class="page-shell">
+    <main class="page-content">
+        {%for e in data%}
+
+        <div class="container my-5">
+
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+
+                    <div class="product-card card border-0">
+
+                        <img src="{{ e.Image }}" class="card-img-top img-responsive center-block" alt="{{ e.titulo }}">
+
+                        <div class="card-body">
+
+                            <h5 class="card-title">{{ e.titulo }}</h5>
+
+                            <p class="card-text"><strong>Description:</strong> {{ e.descripcion }}</p>
+
+                            <p class="card-text"><strong>Precio:</strong> {{e.precio}} CUP</p>
+
+                            <p class="card-text"><strong>Contact:</strong> {{e.telefono}}</p>
+
+                            <p class="card-text"><strong>Date:</strong> {{ e.fecha }}</p>
 
 
-
-    {%for e in data%}
-
-    <div class="container my-5">
-
-        <div class="row">
-            <div class="col-md-6 offset-md-3">
-
-                <div class=" product-card card bg-dark text-white border">
-
-                    <img src="{{ e.Image }}" class="card-img-top img-responsive center-block" alt="...">
-
-                    <div class="card-body">
-
-                        <h5 class="card-title">{{ e.titulo }}</h5>
-
-                        <p class="card-text"><strong>Description:</strong> {{ e.descripcion }}</p>
-
-                        <p class="card-text"><strong>Precio:</strong> {{e.precio}} CUP</p>
-
-                        <p class="card-text"><strong>Contact:</strong> {{e.telefono}}</p>
-
-                        <p class="card-text"><strong>Date:</strong> {{ e.fecha }}</p>
-
-
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    {%endfor%}
-
-
-
-
+        {%endfor%}
+    </main>
 </body>
 
 </html>
